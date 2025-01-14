@@ -33,17 +33,197 @@ nav>a {
     text-decoration: none;
 }
 
-.banner-image {
-    border: 1px solid;
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.slides-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; 
+}
+
+.slide {
+    min-width: 100%;
     height: 450px;
-    background-image: url(https://picsum.photos/1000);
     background-size: cover;
     background-position: center;
 }
 
+
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* Posisi tombol kiri */
+#prevBtn {
+    left: 10px;
+}
+
+/* Posisi tombol kanan */
+#nextBtn {
+    right: 10px;
+}
+
+
 .content {
     height: 500px;
 }
+
+/* layout untuk message us  */
+.content1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+form {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 80px;
+    resize: none;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.gender-options label {
+    font-weight: normal;
+}
+
+/* Container utama untuk form dan result agar berdampingan */
+.form-result-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Membuat layout fleksibel untuk layar kecil */
+    margin-top: 20px;
+}
+
+/* Form Responsif */
+#messageForm {
+    flex: 1;
+    min-width: 200px;
+    max-width: 50%;
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Kotak Hasil Responsif */
+.result-box {
+    flex: 1;
+    min-width: 300px;
+    max-width: 50%;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+    line-height: 1.6;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .form-result-container {
+        flex-direction: column;
+    }
+
+    #messageForm, .result-box {
+        max-width: 100%;
+    }
+}
+
+
+.result-box h2 {
+    margin-top: 0;
+}
+
 
 .main-footer {
     text-align: center;
