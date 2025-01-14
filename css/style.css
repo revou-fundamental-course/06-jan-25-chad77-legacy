@@ -55,34 +55,9 @@ nav>a {
 }
 
 
-#prevBtn, #nextBtn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
+.judul {
+    text-align: center;
 }
-
-/* Posisi tombol kiri */
-#prevBtn {
-    left: 10px;
-}
-
-/* Posisi tombol kanan */
-#nextBtn {
-    right: 10px;
-}
-
 
 .content {
     height: 500px;
@@ -164,7 +139,7 @@ button:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Kotak Hasil Responsif */
+/* result box  */
 .result-box {
     flex: 1;
     min-width: 300px;
@@ -219,6 +194,35 @@ button:hover {
     }
 }
 
+/* auto scroll  */
+#scrollOtomatis {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none;
+    width: 40px;
+    height: 40px;
+    text-align: end;
+    
+}
+
+
+#scrollOtomatis:hover {
+    background-color: #0056b3;
+    background-position: 10px;
+}
+
+#scrollOtomatis i {
+    margin: 0;
+    line-height: 20px;
+}
 
 .result-box h2 {
     margin-top: 0;

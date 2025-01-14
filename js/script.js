@@ -55,3 +55,19 @@ document.addEventListener("DOMContentLoaded", () => {
         `;
     });
 });
+
+// memunculkan tombol saat scroll kebawah
+window.onscroll = function() {
+    let button = document.getElementById("scrollOtomatis");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+};
+
+// scroll ke section homepage
+document.getElementById("scrollOtomatis").onclick = function() {
+    document.getElementById("home-page").scrollIntoView({ behavior: "smooth" });
+};
+
