@@ -163,11 +163,12 @@ nav>a {
 
 .grid-item p {
     color: #666;
+    text-align: justify;
 }
 
 /* layout konten our profile */
 .content {
-    height: 880px;
+    height: 900px;
 }
 
 /* layout konten portofolio */
