@@ -1,4 +1,4 @@
-// ini file javascript
+// ini file javascript.
 
 function replaceNama() {
     let name = prompt("Siapakah nama Anda?", "");
